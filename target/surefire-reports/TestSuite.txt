@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 2.029 sec <<< FAILURE!
+setUp(com.demo.sort_test.AppTest)  Time elapsed: 1.889 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: unknown error: Runtime.executionContextCreated has invalid 'context': {"auxData":{"frameId":"27758.1","isDefault":true},"id":1,"name":"","origin":"://"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.12.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 24 milliseconds
+Build info: version: '2.48.0', revision: 'b7b081a4f1289f17e8ecd38bc67e137c2a12e34a', time: '2015-10-07 09:50:14'
+System info: host: 'N/A', ip: 'N/A', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.3', java.version: '1.7.0_45'
+Session ID: 5be7e61ee54d4e176787c1e2900bd0f8
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/l3/75ss2c7j235gv7brld25vhf00000gp/T/.org.chromium.Chromium.xgFZHE}, rotatable=false, locationContextEnabled=true, version=56.0.2924.87, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:311)
+	at com.demo.sort_test.WebDriverManager.startBrowser(WebDriverManager.java:23)
+	at com.demo.sort_test.AppTest.setUp(AppTest.java:20)

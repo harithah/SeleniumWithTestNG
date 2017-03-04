@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.demo.sort_test.AppTest" tests="1" failures="0" timestamp="4 Mar 2017 09:45:33 GMT" time="1.625" errors="0">
+  <testcase name="@BeforeClass setUp" time="0.0" classname="com.demo.sort_test.AppTest">
+    <failure type="org.openqa.selenium.WebDriverException" message="unknown error: Runtime.executionContextCreated has invalid &amp;apos;context&amp;apos;: {&amp;quot;auxData&amp;quot;:{&amp;quot;frameId&amp;quot;:&amp;quot;27758.1&amp;quot;,&amp;quot;isDefault&amp;quot;:true},&amp;quot;id&amp;quot;:1,&amp;quot;name&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;origin&amp;quot;:&amp;quot;://&amp;quot;}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.12.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 24 milliseconds
+Build info: version: &amp;apos;2.48.0&amp;apos;, revision: &amp;apos;b7b081a4f1289f17e8ecd38bc67e137c2a12e34a&amp;apos;, time: &amp;apos;2015-10-07 09:50:14&amp;apos;
+System info: host: &amp;apos;N/A&amp;apos;, ip: &amp;apos;N/A&amp;apos;, os.name: &amp;apos;Mac OS X&amp;apos;, os.arch: &amp;apos;x86_64&amp;apos;, os.version: &amp;apos;10.12.3&amp;apos;, java.version: &amp;apos;1.7.0_45&amp;apos;
+Session ID: 5be7e61ee54d4e176787c1e2900bd0f8
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/l3/75ss2c7j235gv7brld25vhf00000gp/T/.org.chromium.Chromium.xgFZHE}, rotatable=false, locationContextEnabled=true, version=56.0.2924.87, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]">
+      <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Runtime.executionContextCreated has invalid 'context': {"auxData":{"frameId":"27758.1","isDefault":true},"id":1,"name":"","origin":"://"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.12.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 24 milliseconds
+Build info: version: '2.48.0', revision: 'b7b081a4f1289f17e8ecd38bc67e137c2a12e34a', time: '2015-10-07 09:50:14'
+System info: host: 'N/A', ip: 'N/A', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.3', java.version: '1.7.0_45'
+Session ID: 5be7e61ee54d4e176787c1e2900bd0f8
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/l3/75ss2c7j235gv7brld25vhf00000gp/T/.org.chromium.Chromium.xgFZHE}, rotatable=false, locationContextEnabled=true, version=56.0.2924.87, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:311)
+	at com.demo.sort_test.WebDriverManager.startBrowser(WebDriverManager.java:23)
+	at com.demo.sort_test.AppTest.setUp(AppTest.java:20)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:177)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:105)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:103)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:74)
+... Removed 30 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="@AfterClass tearDown" time="0.0" classname="com.demo.sort_test.AppTest">
+    <skipped/>
+  </testcase>
+  <testcase name="testGoogleSearch" time="0.003" classname="com.demo.sort_test.AppTest">
+    <skipped/>
+  </testcase>
+</testsuite>

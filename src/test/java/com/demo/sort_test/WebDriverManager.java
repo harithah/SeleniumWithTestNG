@@ -2,6 +2,7 @@ package com.demo.sort_test;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -14,8 +15,8 @@ public class WebDriverManager {
 
     public static WebDriver startDriver() {
         WebDriver d;
-        d = new ChromeDriver();
-//        d = new FirefoxDriver();
+//        d = new ChromeDriver();
+        d = new FirefoxDriver();
         return d;
     }
 
@@ -26,10 +27,10 @@ public class WebDriverManager {
     }
 
     public static String getUrl() {
-        return "http://www.goeuro.es/";
+        return "http://www.goeuro.com/";
     }
 
-    public static void stopDriver(WebDriver driver) {
-        driver.close();
-    }
+//    public static void stopDriver(WebDriver driver) {
+//        driver.close();
+//    }
 }

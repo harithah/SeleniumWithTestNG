@@ -22,14 +22,14 @@ public class AppTest
     }
 
     @Test
-    public void testGoogleSearch() {
+    public void testSearch() {
         homePage.enterQuery();
     }
 
 
     @AfterClass
     public void tearDown() {
-        WebDriverManager.stopDriver(driver);
+//        WebDriverManager.stopDriver(driver);
     }
 
 

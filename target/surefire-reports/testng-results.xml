@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="App test suite" duration-ms="118804" started-at="2017-03-05T12:12:21Z" finished-at="2017-03-05T12:14:19Z">
+  <suite name="App test suite" duration-ms="227613" started-at="2017-03-05T23:01:40Z" finished-at="2017-03-05T23:05:27Z">
     <groups>
     </groups>
-    <test name="App test" duration-ms="118804" started-at="2017-03-05T12:12:21Z" finished-at="2017-03-05T12:14:19Z">
+    <test name="App test" duration-ms="227613" started-at="2017-03-05T23:01:40Z" finished-at="2017-03-05T23:05:27Z">
       <class name="com.demo.sort_test.SortingTest">
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="14803" started-at="2017-03-05T12:12:21Z" finished-at="2017-03-05T12:12:35Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="17887" started-at="2017-03-05T23:01:40Z" finished-at="2017-03-05T23:01:58Z">
         </test-method>
-        <test-method status="PASS" signature="testSearch()" name="testSearch" duration-ms="103991" started-at="2017-03-05T12:12:35Z" finished-at="2017-03-05T12:14:19Z">
+        <test-method status="PASS" signature="verifyIfPriceArrangedAcendingInAirMode()" name="verifyIfPriceArrangedAcendingInAirMode" duration-ms="97767" started-at="2017-03-05T23:01:58Z" finished-at="2017-03-05T23:03:35Z">
         </test-method>
-        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="0" started-at="2017-03-05T12:14:19Z" finished-at="2017-03-05T12:14:19Z">
+        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="12" started-at="2017-03-05T23:03:35Z" finished-at="2017-03-05T23:03:35Z">
+        </test-method>
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="19857" started-at="2017-03-05T23:03:35Z" finished-at="2017-03-05T23:03:55Z">
+        </test-method>
+        <test-method status="PASS" signature="verifyIfPriceArrangedAcendingInBusMode()" name="verifyIfPriceArrangedAcendingInBusMode" duration-ms="55816" started-at="2017-03-05T23:03:55Z" finished-at="2017-03-05T23:04:51Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="47" started-at="2017-03-05T23:04:51Z" finished-at="2017-03-05T23:04:51Z">
+        </test-method>
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="17267" started-at="2017-03-05T23:04:51Z" finished-at="2017-03-05T23:05:08Z">
+        </test-method>
+        <test-method status="PASS" signature="verifyIfPriceArrangedAcendingInTrainMode()" name="verifyIfPriceArrangedAcendingInTrainMode" duration-ms="18941" started-at="2017-03-05T23:05:08Z" finished-at="2017-03-05T23:05:27Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="8" started-at="2017-03-05T23:05:27Z" finished-at="2017-03-05T23:05:27Z">
         </test-method>
       </class>
     </test>

@@ -15,7 +15,7 @@ public class SortingTest {
     HomePage homePage;
     ResultsPage resultsPage;
 
-    @BeforeClass
+    @BeforeMethod
     public void setUp() {
         driver = WebDriverManager.startDriver();
         WebDriverManager.startBrowser(driver);
@@ -23,11 +23,29 @@ public class SortingTest {
         resultsPage = new ResultsPage(this.driver);
     }
 
+
     @Test
-    public void testSearch() throws InterruptedException {
+    public void verifyIfPriceArrangedAcendingInTrainMode() throws InterruptedException {
         homePage.enterQuery();
         Assert.assertEquals(resultsPage.waitForResultsPage(), "GoEuro");
-        Assert.assertTrue(verifyIfPriceArrangedAscending());
+        Assert.assertTrue(resultsPage.verifyIfPriceArrangedAscending());
+//        Assert.assertTrue(verifyIfPriceArrangedAscending());
+    }
+
+    @Test
+    public void verifyIfPriceArrangedAcendingInAirMode() throws InterruptedException {
+        homePage.enterQuery();
+        Assert.assertEquals(resultsPage.waitForResultsPage(), "GoEuro");
+        resultsPage.goToAirMode();
+        Assert.assertTrue(resultsPage.verifyIfPriceArrangedAscending());
+    }
+
+    @Test
+    public void verifyIfPriceArrangedAcendingInBusMode() throws InterruptedException {
+        homePage.enterQuery();
+        Assert.assertEquals(resultsPage.waitForResultsPage(), "GoEuro");
+        resultsPage.goToBusMode();
+        Assert.assertTrue(resultsPage.verifyIfPriceArrangedAscending());
     }
 
     private boolean verifyIfPriceArrangedAscending() throws InterruptedException {
@@ -49,7 +67,7 @@ public class SortingTest {
         }
     }
 
-    @AfterClass
+    @AfterMethod
     public void tearDown() {
         WebDriverManager.stopDriver(driver);
     }

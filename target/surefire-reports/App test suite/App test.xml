@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.demo.sort_test.SortingTest" tests="1" failures="0" timestamp="5 Mar 2017 06:44:19 GMT" time="118.804" errors="0">
-  <testcase name="testSearch" time="103.991" classname="com.demo.sort_test.SortingTest"/>
+<testsuite name="com.demo.sort_test.SortingTest" tests="3" failures="0" timestamp="5 Mar 2017 17:35:27 GMT" time="227.613" errors="0">
+  <testcase name="verifyIfPriceArrangedAcendingInAirMode" time="97.767" classname="com.demo.sort_test.SortingTest"/>
+  <testcase name="verifyIfPriceArrangedAcendingInBusMode" time="55.816" classname="com.demo.sort_test.SortingTest"/>
+  <testcase name="verifyIfPriceArrangedAcendingInTrainMode" time="18.941" classname="com.demo.sort_test.SortingTest"/>
 </testsuite>

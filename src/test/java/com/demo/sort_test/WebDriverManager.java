@@ -1,36 +1,31 @@
 package com.demo.sort_test;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Created by harithah on 3/4/17.
- */
 public class WebDriverManager {
-    public static Wait<WebDriver> wait;
-    public static String url;
+    private static Wait<WebDriver> wait;
+    private static String url;
 
-    public static WebDriver startDriver() {
-        WebDriver d;
-//        d = new ChromeDriver();
-        d = new FirefoxDriver();
-        return d;
+    protected static WebDriver startDriver() {
+        WebDriver driver;
+        driver = new FirefoxDriver();
+        return driver;
     }
 
-    public static void startBrowser(WebDriver driver) {
+    protected static void startBrowser(WebDriver driver) {
         driver.get(getUrl());
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, 200);
     }
 
-    public static String getUrl() {
+    private static String getUrl() {
         return "http://www.goeuro.com/";
     }
 
-//    public static void stopDriver(WebDriver driver) {
-//        driver.close();
-//    }
+    protected static void stopDriver(WebDriver driver) {
+        driver.close();
+    }
 }

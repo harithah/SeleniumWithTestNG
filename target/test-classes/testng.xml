@@ -3,7 +3,7 @@
 <suite name="App test suite">
     <test name="App test">
         <classes>
-            <class name="com.demo.sort_test.AppTest"/>
+            <class name="com.demo.sort_test.SortingTest"/>
         </classes>
     </test>
 </suite>

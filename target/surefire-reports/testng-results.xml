@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="App test suite" duration-ms="19446" started-at="2017-03-04T15:40:02Z" finished-at="2017-03-04T15:40:21Z">
+  <suite name="App test suite" duration-ms="118804" started-at="2017-03-05T12:12:21Z" finished-at="2017-03-05T12:14:19Z">
     <groups>
     </groups>
-    <test name="App test" duration-ms="19446" started-at="2017-03-04T15:40:02Z" finished-at="2017-03-04T15:40:21Z">
-      <class name="com.demo.sort_test.AppTest">
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="17936" started-at="2017-03-04T15:40:02Z" finished-at="2017-03-04T15:40:19Z">
+    <test name="App test" duration-ms="118804" started-at="2017-03-05T12:12:21Z" finished-at="2017-03-05T12:14:19Z">
+      <class name="com.demo.sort_test.SortingTest">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="14803" started-at="2017-03-05T12:12:21Z" finished-at="2017-03-05T12:12:35Z">
         </test-method>
-        <test-method status="PASS" signature="testGoogleSearch()" name="testGoogleSearch" duration-ms="1191" started-at="2017-03-04T15:40:19Z" finished-at="2017-03-04T15:40:21Z">
+        <test-method status="PASS" signature="testSearch()" name="testSearch" duration-ms="103991" started-at="2017-03-05T12:12:35Z" finished-at="2017-03-05T12:14:19Z">
         </test-method>
-        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="312" started-at="2017-03-04T15:40:21Z" finished-at="2017-03-04T15:40:21Z">
+        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="0" started-at="2017-03-05T12:14:19Z" finished-at="2017-03-05T12:14:19Z">
         </test-method>
       </class>
     </test>

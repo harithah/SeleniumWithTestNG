@@ -28,19 +28,22 @@ public class SortingTest {
         homePage.enterQuery();
         Assert.assertEquals(resultsPage.waitForResultsPage(), "GoEuro");
         Assert.assertTrue(verifyIfPriceArrangedAscending());
-//        Assert.assertTrue(resultsPage.verifyIfPriceArrangedAscendingInModeTrain());
-//        Assert.assertTrue(resultsPage.verifyIfPriceArrangedAscendingInModeAir());
-//        Assert.assertTrue(resultsPage.verifyIfPriceArrangedAscendingInModeBus());
     }
 
     private boolean verifyIfPriceArrangedAscending() throws InterruptedException {
-        boolean isPriceArrangedAscendingInTrainMode = resultsPage.verifyIfPriceArrangedAscending();
-        resultsPage.goToAirMode();
-        boolean isPriceArrangedAscendingInAirMode = resultsPage.verifyIfPriceArrangedAscending();
-        resultsPage.goToBusMode();
-        boolean isPriceArrangedAscendingInBusMode = resultsPage.verifyIfPriceArrangedAscending();
-        if(isPriceArrangedAscendingInTrainMode||isPriceArrangedAscendingInAirMode||isPriceArrangedAscendingInBusMode)
-        return true;
+        boolean isPriceArrangedAscending;
+        isPriceArrangedAscending = resultsPage.verifyIfPriceArrangedAscending();
+        if (isPriceArrangedAscending) {
+            resultsPage.goToAirMode();
+            isPriceArrangedAscending = resultsPage.verifyIfPriceArrangedAscending();
+        }
+        if (isPriceArrangedAscending) {
+            resultsPage.goToBusMode();
+            isPriceArrangedAscending = resultsPage.verifyIfPriceArrangedAscending();
+        }
+        if (isPriceArrangedAscending) {
+            return true;
+        }
         else {
             return false;
         }

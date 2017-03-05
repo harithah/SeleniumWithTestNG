@@ -15,6 +15,10 @@ public class ResultsPage {
     private double doubleInitialPrice;
     private By tranportModeElement = By.cssSelector("li a[class*=ResultTabs__]");
     private By element = By.cssSelector("div[class*=Paging__pagingContainer___289JA] div[class*=Paging__cell] >span[data-key='dw.paging.next']");
+    private By tabResults = By.className("resultTabs");
+    private By labelPrice = By.cssSelector("div[class*=Results__tabsBody] div[class*=Result__result__] span[data-test='price']");
+    private By tabAlternativeResults = By.cssSelector("div[class*=Results__alternativeResultsDivider]");
+
 
     public ResultsPage(WebDriver driver) {
         this.driver = driver;
@@ -22,7 +26,7 @@ public class ResultsPage {
     }
 
     public String waitForResultsPage() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("resultTabs")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(tabResults));
         System.out.println(driver.getTitle());
         return driver.getTitle();
     }
@@ -31,14 +35,18 @@ public class ResultsPage {
 
         boolean blnFlag = true;
         List<WebElement> resultsTab =
-                driver.findElements(By.cssSelector("div[class*=Results__tabsBody] div[class*=Result__result__] span[data-test='price']"));
+                driver.findElements(labelPrice);
         for (WebElement result : resultsTab) {
             String strPrice = result.getText().replaceAll("€", "").replaceAll(",", "");
             double doublePrice = Double.parseDouble(strPrice);
-
+            System.out.println("Old price"+doubleInitialPrice);
+            System.out.println("New price"+doublePrice);
+            if(driver.findElements(tabAlternativeResults).size()!=0){
+                doubleInitialPrice=0.0;
+            }
             if (doublePrice < doubleInitialPrice) {
                 blnFlag = false;
-                break;
+                return blnFlag;
             } else {
                 doubleInitialPrice = doublePrice;
             }
@@ -54,7 +62,7 @@ public class ResultsPage {
             Actions action = new Actions(driver);
             Thread.sleep(1000);
             action.moveToElement(driver.findElement(element)).click().perform();
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("resultTabs")));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(tabResults));
             blnAscendingOrder = comparePrice();
         }
         return blnAscendingOrder;

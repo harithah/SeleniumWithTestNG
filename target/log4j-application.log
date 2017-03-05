@@ -1,0 +1,5 @@
+2017-03-06 01:12:09,739  INFO [main] HomePage:21 - Starting the driver
+ 2017-03-06 01:12:21,544  INFO [main] HomePage:23 - Navigating to the site
+ 2017-03-06 01:12:21,558  INFO [main] HomePage:27 - On the home page
+ 2017-03-06 01:12:24,725  INFO [main] HomePage:41 - Performing search
+ 

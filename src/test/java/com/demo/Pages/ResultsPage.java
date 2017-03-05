@@ -1,5 +1,6 @@
 package com.demo.Pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +19,7 @@ public class ResultsPage {
     private By tabResults = By.className("resultTabs");
     private By labelPrice = By.cssSelector("div[class*=Results__tabsBody] div[class*=Result__result__] span[data-test='price']");
     private By tabAlternativeResults = By.cssSelector("div[class*=Results__alternativeResultsDivider]");
+    public static Logger logger = Logger.getLogger(HomePage.class);
 
 
     public ResultsPage(WebDriver driver) {
@@ -27,7 +29,7 @@ public class ResultsPage {
 
     public String waitForResultsPage() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(tabResults));
-        System.out.println(driver.getTitle());
+        logger.info(driver.getTitle());
         return driver.getTitle();
     }
 
@@ -39,12 +41,11 @@ public class ResultsPage {
         for (WebElement result : resultsTab) {
             String strPrice = result.getText().replaceAll("€", "").replaceAll(",", "");
             double doublePrice = Double.parseDouble(strPrice);
-            System.out.println("Old price"+doubleInitialPrice);
-            System.out.println("New price"+doublePrice);
             if(driver.findElements(tabAlternativeResults).size()!=0){
                 doubleInitialPrice=0.0;
             }
             if (doublePrice < doubleInitialPrice) {
+                logger.info("Price found in decending order");
                 blnFlag = false;
                 return blnFlag;
             } else {
@@ -62,6 +63,7 @@ public class ResultsPage {
             Actions action = new Actions(driver);
             Thread.sleep(1000);
             action.moveToElement(driver.findElement(element)).click().perform();
+            logger.info("Clicking NEXT button");
             wait.until(ExpectedConditions.visibilityOfElementLocated(tabResults));
             blnAscendingOrder = comparePrice();
         }
@@ -81,9 +83,11 @@ public class ResultsPage {
 
     public void goToAirMode() {
         driver.findElements(tranportModeElement).get(1).click();
+        logger.info("Air mode");
     }
 
     public void goToBusMode() {
         driver.findElements(tranportModeElement).get(2).click();
+        logger.info("Bus mode");
     }
 }

@@ -6,8 +6,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebDriverManager {
-    private static Wait<WebDriver> wait;
-    private static String url;
+    private static String url="http://www.goeuro.com/";
 
     protected static WebDriver startDriver() {
         WebDriver driver;
@@ -18,11 +17,10 @@ public class WebDriverManager {
     protected static void startBrowser(WebDriver driver) {
         driver.get(getUrl());
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, 200);
     }
 
     private static String getUrl() {
-        return "http://www.goeuro.com/";
+        return url;
     }
 
     protected static void stopDriver(WebDriver driver) {

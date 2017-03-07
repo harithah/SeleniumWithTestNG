@@ -36,7 +36,7 @@ public class SortingTest {
     @Test(dataProvider="getData")
     public void verifyIfPriceArrangedAcendingInTrainMode(String strDeparture, String strArrival) throws InterruptedException {
         enterSearch(strDeparture,strArrival);
-        verifyAndLog();
+        verifyAndLog("Train mode");
 
     }
 
@@ -44,7 +44,7 @@ public class SortingTest {
     public void verifyIfPriceArrangedAcendingInAirMode(String strDeparture, String strArrival) throws InterruptedException {
         enterSearch(strDeparture,strArrival);
         resultsPage.goToAirMode();
-        verifyAndLog();
+        verifyAndLog("Air mode");
 
     }
 
@@ -52,7 +52,7 @@ public class SortingTest {
     public void verifyIfPriceArrangedAcendingInBusMode(String strDeparture, String strArrival) throws InterruptedException {
         enterSearch(strDeparture,strArrival);
         resultsPage.goToBusMode();
-        verifyAndLog();
+        verifyAndLog("Bus mode");
 
     }
 
@@ -61,11 +61,10 @@ public class SortingTest {
         Assert.assertEquals(resultsPage.waitForResultsPage(), "GoEuro");
     }
 
-    private void verifyAndLog() throws InterruptedException {
+    private void verifyAndLog(String strTravelMode) throws InterruptedException {
         boolean blnVerifyPriceAscending = resultsPage.verifyIfPriceArrangedAscending();
-        Assert.assertTrue(blnVerifyPriceAscending);
-        logger.info("Price in ascending order is asserted to be: " + blnVerifyPriceAscending);
-
+        logger.info("Price in ascending order for "+strTravelMode+" is asserted to be: " + blnVerifyPriceAscending);
+        Assert.assertTrue(blnVerifyPriceAscending,"Price not found in ascending order for "+strTravelMode);
     }
 
     @AfterMethod

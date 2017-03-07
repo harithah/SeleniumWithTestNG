@@ -35,7 +35,6 @@ public class ResultsPage {
 
     private boolean comparePrice() {
 
-        boolean blnFlag = true;
         List<WebElement> resultsTab =
                 driver.findElements(labelPrice);
         for (WebElement result : resultsTab) {
@@ -46,13 +45,12 @@ public class ResultsPage {
             }
             if (doublePrice < doubleInitialPrice) {
                 logger.info("Price found in decending order");
-                blnFlag = false;
-                return blnFlag;
+                return false;
             } else {
                 doubleInitialPrice = doublePrice;
             }
         }
-        return blnFlag;
+        return true;
     }
 
     private boolean clickNextAndContinueCompare() throws InterruptedException {
@@ -65,9 +63,12 @@ public class ResultsPage {
             action.moveToElement(driver.findElement(element)).click().perform();
             logger.info("Clicking NEXT button");
             wait.until(ExpectedConditions.visibilityOfElementLocated(tabResults));
-            blnAscendingOrder = comparePrice();
+//            comparePrice();
+            if (!comparePrice()){
+                return false;
+            }
         }
-        return blnAscendingOrder;
+        return true;
     }
 
     public boolean verifyIfPriceArrangedAscending() throws InterruptedException {

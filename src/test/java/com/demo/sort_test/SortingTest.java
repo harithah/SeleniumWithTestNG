@@ -34,14 +34,14 @@ public class SortingTest {
     }
 
     @Test(dataProvider="getData")
-    public void verifyIfPriceArrangedAcendingInTrainMode(String strDeparture, String strArrival) throws InterruptedException {
+    public void verifyIfPriceArrangedAscendingInTrainMode(String strDeparture, String strArrival) throws InterruptedException {
         enterSearch(strDeparture,strArrival);
         verifyAndLog("Train mode");
 
     }
 
     @Test(dataProvider="getData")
-    public void verifyIfPriceArrangedAcendingInAirMode(String strDeparture, String strArrival) throws InterruptedException {
+    public void verifyIfPriceArrangedAscendingInAirMode(String strDeparture, String strArrival) throws InterruptedException {
         enterSearch(strDeparture,strArrival);
         resultsPage.goToAirMode();
         verifyAndLog("Air mode");
@@ -49,7 +49,7 @@ public class SortingTest {
     }
 
     @Test(dataProvider="getData")
-    public void verifyIfPriceArrangedAcendingInBusMode(String strDeparture, String strArrival) throws InterruptedException {
+    public void verifyIfPriceArrangedAscendingInBusMode(String strDeparture, String strArrival) throws InterruptedException {
         enterSearch(strDeparture,strArrival);
         resultsPage.goToBusMode();
         verifyAndLog("Bus mode");

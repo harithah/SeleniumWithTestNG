@@ -1,3 +1,6 @@
 .idea/
 *.iml
 .DS_Store
+target/surefire/*
+target/surefire-reports/*
+target/test-classes/*
